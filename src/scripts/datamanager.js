@@ -41,4 +41,14 @@ function setPageThemeToStorage(){
     localStorage.setItem("pageTheme", pageTheme);
 };
 
-// delete local storage
+// check if data exists
+// if it does, retrieve it,
+// else, set default variables to localstorage
+
+if (localStorage.getItem("pageTheme") && localStorage.getItem("cssThemes").length > 0 ){
+    getStoredPageTheme();
+    getStoredCssThemes();
+} else {
+    setCssThemesToStorage();
+    setPageThemeToStorage();
+}
