@@ -1,9 +1,9 @@
 // Declare JS data that we want to store
-let cssTheme = [
+let cssThemes = [
 
 ];
 
-let pagTheme = "dark";
+let pageTheme = "dark";
 
 
 /**
@@ -24,11 +24,9 @@ function getStoredCssThemes(){
  * Retrieve, assign, and return the latest stored page theme from the browser local storage
  * @returns  String. Should be "light" or "dark"
  */
-function getStoredPageThemes(){
+function getStoredPageTheme(){
     // Update the pageTheme array
-    pageTheme = localStorage.getITem("pageTheme");
-
-    // Return the updated data
+    pageTheme = localStorage.getItem("pageTheme");
     return pageTheme;
 };
 
@@ -37,6 +35,10 @@ function getStoredPageThemes(){
 function setCssThemesToStorage(){
     let dataAsJsonString = JSON.stringify(cssThemes);
     localStorage.setItem("cssThemes", dataAsJsonString);
-}
+};
+
+function setPageThemeToStorage(){
+    localStorage.setItem("pageTheme", pageTheme);
+};
 
 // delete local storage
