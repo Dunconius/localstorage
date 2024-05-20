@@ -12,7 +12,7 @@ let pageTheme = "dark";
  */
 function getStoredCssThemes(){
     // Update the cssTheme array
-    let rawJsonStringCssThemes = localStorage.getITem("cssThemes");
+    let rawJsonStringCssThemes = localStorage.getItem("cssThemes");
     cssThemes = JSON.parse(rawJsonStringCssThemes);
 
     // Return the updated data
