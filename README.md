@@ -1,5 +1,9 @@
 # Local Storage
 
+# Deployments
+
+- [Netlify](https://dunconiuslocalstorage.netlify.app/)
+
 # Features
 
 1. Use local storage to persist CSS themes
